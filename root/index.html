@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Expression Recognition - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>FaceRec</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Facial Expression Recognition for Interviews</h1>
+            <p>Analyze candidate confidence and eye contact during video interviews to make data-driven decisions.</p>
+            <a href="features.html" class="btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Real-Time Emotion Detection</h3>
+                    <p>Analyze facial expressions during interviews to detect emotions like confidence, nervousness, and attention.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Eye Contact Monitoring</h3>
+                    <p>Track eye movements to measure how much attention a candidate is giving to the interviewer.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Graphical Data Reports</h3>
+                    <p>Provide clear visual graphs showing confidence levels and engagement over the course of the interview.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2 class="video-title">Demo Interview</h2>
+            <video id="video" width="640" height="360" autoplay muted></video>
+            <div class="button-container">
+                <button onclick="startVideo()" class="btn-secondary">Start Interview</button>
+                <button onclick="stopVideo()" class="btn-secondary">Stop Interview</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FaceRec. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
