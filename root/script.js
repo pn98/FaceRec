@@ -1,11 +1,8 @@
-
-
 // Get the video element from the DOM
 const video = document.getElementById('video');
 
 // Function to start webcam video stream
 function startVideo() {
-    // Access the user's webcam using the MediaDevices API
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(stream => {
             video.srcObject = stream;  // Display the webcam stream in the video element
@@ -19,33 +16,24 @@ function startVideo() {
 
 // Function to stop the webcam video stream
 function stopVideo() {
-    // Get the video stream
     const stream = video.srcObject;
     if (stream) {
-        // Stop all the tracks (video feed) to turn off the camera
         const tracks = stream.getTracks();
         tracks.forEach(track => track.stop());
         video.srcObject = null;  // Clear the video element
     }
 }
 
-// Function to generate a random interview question
+// Function to generate a random question
 function generateQuestion() {
-    fetch('InterviewQuestions.txt')
+    fetch('InterviewQuestions.txt') // Replace with the path to your questions file
         .then(response => response.text())
         .then(data => {
-            const questions = data.split('\n'); // Split the text into an array by newline
-            const randomIndex = Math.floor(Math.random() * questions.length); // Get a random index
-            const question = questions[randomIndex]; // Select the question at that index
-
-            // Display the question (You can choose how to display it)
-            console.log("Random Question: ", question);
-            alert(question); // Example of displaying it in an alert
+            const questions = data.split('\n'); // Split questions by new line
+            const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+            document.getElementById('questionDisplay').innerText = randomQuestion; // Display the random question
         })
-        .catch(err => {
-            console.error("Error fetching the questions: ", err);
-            alert("Unable to fetch questions.");
-        });
+        .catch(err => console.error("Error fetching questions: ", err));
 }
 
 // Contact form handling
