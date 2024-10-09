@@ -1,3 +1,5 @@
+
+
 // Get the video element from the DOM
 const video = document.getElementById('video');
 
@@ -25,6 +27,25 @@ function stopVideo() {
         tracks.forEach(track => track.stop());
         video.srcObject = null;  // Clear the video element
     }
+}
+
+// Function to generate a random interview question
+function generateQuestion() {
+    fetch('InterviewQuestions.txt')
+        .then(response => response.text())
+        .then(data => {
+            const questions = data.split('\n'); // Split the text into an array by newline
+            const randomIndex = Math.floor(Math.random() * questions.length); // Get a random index
+            const question = questions[randomIndex]; // Select the question at that index
+
+            // Display the question (You can choose how to display it)
+            console.log("Random Question: ", question);
+            alert(question); // Example of displaying it in an alert
+        })
+        .catch(err => {
+            console.error("Error fetching the questions: ", err);
+            alert("Unable to fetch questions.");
+        });
 }
 
 // Contact form handling
