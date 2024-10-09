@@ -1,3 +1,4 @@
+
 /* Global Styles */
 * {
     margin: 0;
@@ -80,19 +81,6 @@ video {
     margin-bottom: 40px;
 }
 
-.btn-primary {
-    background-color: #f39c12;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-}
-
-.btn-primary:hover {
-    background-color: #e67e22;
-}
-
 /* Features Section */
 .features {
     padding: 40px 0; /* Reduced padding */
@@ -117,6 +105,26 @@ video {
 .feature-item h3 {
     margin-bottom: 15px;
     color: #333;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    display: inline-block; /* Ensures the button behaves like a text element */
+}
+
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    text-decoration: none;
 }
 
 /* Video Section Title */
@@ -150,6 +158,26 @@ video {
 
 .btn-secondary:hover {
     background-color: #2980b9;
+}
+
+/* Practice Section */
+
+/* Remove blue outline on button focus */
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Optional: increase button size */
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+/* Spacing between button containers */
+.button-spacing {
+    margin-bottom: 20px;
 }
 
 /* Footer */
