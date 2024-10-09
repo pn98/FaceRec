@@ -1,4 +1,3 @@
-
 /* Global Styles */
 * {
     margin: 0;
@@ -17,13 +16,14 @@ body {
     width: 85%;
     margin: auto;
     overflow: hidden;
+    text-align: center; /* Center text by default */
 }
 
 /* Video Element */
 video {
-    display: block; /* Ensure block display for centering */
-    margin: 20px auto; /* Center the video */
-    max-width: 100%; /* Responsive design */
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
 }
 
 /* Header & Navigation */
@@ -68,7 +68,7 @@ video {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 50px 0; /* Reduced padding */
+    padding: 50px 0;
 }
 
 .hero h1 {
@@ -83,7 +83,7 @@ video {
 
 /* Features Section */
 .features {
-    padding: 40px 0; /* Reduced padding */
+    padding: 40px 0;
     background-color: #f4f4f4;
 }
 
@@ -98,7 +98,7 @@ video {
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
 }
 
@@ -107,52 +107,29 @@ video {
     color: #333;
 }
 
-.container {
-    text-align: center;
+/* Button Styles */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    border-radius: 5px; /* Add border radius for consistency */
+    border: none; /* Remove border for all buttons */
+    outline: none; /* Remove default outline */
 }
 
 .btn-primary {
     background-color: #f39c12;
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    display: inline-block; /* Ensures the button behaves like a text element */
 }
-
 
 .btn-primary:hover {
     background-color: #e67e22;
-    text-decoration: none;
 }
 
-/* Video Section Title */
-.video-title {
-    text-align: center;   /* Center the text */
-    margin: 20px 0;      /* Add some vertical spacing */
-    font-size: 1.5rem;    /* Adjust font size as needed */
-    color: #333;          /* Set the text color */
-}
-
-/* Video Section */
-.video-section {
-    padding: 40px 0; /* Padding for video section */
-}
-
-/* Button Container */
-.button-container {
-    text-align: center; /* Center buttons */
-}
-
-/* Button Styles */
 .btn-secondary {
     background-color: #3498db;
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
     margin: 10px;
 }
 
@@ -160,24 +137,34 @@ video {
     background-color: #2980b9;
 }
 
-/* Practice Section */
-
-/* Remove blue outline on button focus */
-.btn:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-/* Optional: increase button size */
-.btn-lg {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-}
-
-/* Spacing between button containers */
+/* Practice */
 .button-spacing {
     margin-bottom: 20px;
+}
+
+/* Video Section Title */
+.video-box {
+    width: 520px; /* Match video width */
+    height: 400px; /* Match video height */
+    background-color: #f4f4f4; /* Light background for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    margin: 0 auto; /* Center the box */
+    display: flex; /* Center the video inside the box */
+    justify-content: center;
+    align-items: center;
+}
+
+.video-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Video Section */
+.video-section {
+    padding: 40px 0;
 }
 
 /* Footer */
