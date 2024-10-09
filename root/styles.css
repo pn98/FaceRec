@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -99,7 +99,7 @@ video {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    width: 100%;
 }
 
 .feature-item h3 {
@@ -110,7 +110,6 @@ video {
 /* Button Styles */
 .btn-primary, .btn-secondary {
     padding: 10px 20px;
-    text-decoration: none;
     font-size: 1.1rem;
     display: inline-block;
     border-radius: 5px; /* Add border radius for consistency */
