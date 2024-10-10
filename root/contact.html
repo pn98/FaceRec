@@ -26,7 +26,6 @@
         </div>
     </header>
 
-
     <section class="contact">
         <div class="container">
             <h2>Contact Us</h2>
@@ -42,8 +41,39 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
+            <!-- Placeholder for the success message -->
+            <div id="formMessage" class="mt-3"></div>
         </div>
     </section>
+    <script>
+        // Contact form handling
+const contactForm = document.querySelector('form');
+const formMessage = document.getElementById('formMessage');
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Gather form data
+    const name = contactForm.querySelector('input[placeholder="Your Name"]').value;
+    const email = contactForm.querySelector('input[placeholder="Your Email"]').value;
+    const message = contactForm.querySelector('textarea').value;
+
+    // Basic validation
+    if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields.');
+        return;
+    }
+
+    // Send form data to the server or display it
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    // Display success message in the UI
+    formMessage.innerHTML = `<div class="alert alert-success">Thank you for contacting us ${name}!</div>`;
+    contactForm.reset();  // Clear the form after submission
+});
+    </script>
 
     <footer class="footer">
         <div class="container">
