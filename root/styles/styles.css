@@ -1,0 +1,151 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 85%; 
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.nav-links a:hover {
+    background-color: #f39c12;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Features Section */
+.features {
+    margin: 0; 
+    padding: 0 20px; 
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 33.33%; 
+    box-sizing: border-box; 
+    text-align: center; /* Center text for feature items */
+}
+
+.feature-item img {
+    width: 100%; /* Make images responsive */
+    height: 190px; /* Set a fixed height for images to align them */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+/* Button Styles */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    display: inline-block;
+    border-radius: 5px; 
+    border: none; 
+    outline: none; 
+}
+
+.btn-primary {
+    background-color: #f39c12;
+    color: #fff;
+    margin-top: 20px; 
+}
+
+.btn-primary:hover {
+    background-color: #e67e22;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    margin: 10px;
+    color: #fff;
+    background-color: rgb(38, 109, 185);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(0, 106, 255);
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
