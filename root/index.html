@@ -59,21 +59,78 @@
                 </div>
 
                 <!-- Video Section -->
-                <div class="video-section">
                     <h2 class="video-title">Demo Interview</h2>
                     <div class="video-box">
                         <video id="video" width="640" height="360" autoplay muted></video>
                     </div>
+                    <div class="question-box">
+                        <h2>Interview Question</h2>
+                        <div id="questionDisplay" class="question-display">Click "Get Random Question" to start!</div>
+                        <button onclick="generateQuestion()" class="btn-secondary mt-3">Get Random Question</button>
+                    </div>
                     <div class="button-container">
                         <button onclick="startVideo()" class="btn-secondary">Start Interview</button>
                         <button onclick="stopVideo()" class="btn-secondary">Stop Interview</button>
-                        <button onclick="generateQuestion()" class="btn-secondary">Get Random Question</button>
                     </div>
-                    <div id="questionDisplay" class="mt-3"></div> <!-- Element to display the question -->
                 </div>
-            </div>
+
         </div>
     </section>
+    <script>
+            // Get the video element from the DOM
+    const video = document.getElementById('video');
+
+    // Function to start webcam video stream
+    function startVideo() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;  // Display the webcam stream in the video element
+                video.play();               // Ensure video is playing
+            })
+            .catch(err => {
+                console.error("Error accessing the webcam: ", err);
+                alert("Unable to access the webcam. Please ensure it's enabled.");
+            });
+    }
+
+    // Function to stop the webcam video stream
+    function stopVideo() {
+        const stream = video.srcObject;
+        if (stream) {
+            const tracks = stream.getTracks();
+            tracks.forEach(track => track.stop());
+            video.srcObject = null;  // Clear the video element
+        }
+    }
+
+    let askedQuestions = []; // Array to store already asked questions
+            // Function to generate a random question
+    function generateQuestion() {
+        fetch('InterviewQuestions.txt') // Replace with the path to your questions file
+            .then(response => response.text())
+            .then(data => {
+                const questions = data.split('\n'); // Split questions by new line
+                let randomQuestion;
+                let unaskedQuestions = questions.filter(q => !askedQuestions.includes(q)); // Filter out already asked questions
+
+                if (unaskedQuestions.length === 0) {
+                    document.getElementById('questionDisplay').innerText = "No more new questions!";
+                    return;
+                }
+
+                // Pick a random question from the unasked questions
+                randomQuestion = unaskedQuestions[Math.floor(Math.random() * unaskedQuestions.length)];
+
+                // Display the random question
+                document.getElementById('questionDisplay').innerText = randomQuestion;
+
+                // Add the question to the askedQuestions array
+                askedQuestions.push(randomQuestion);
+            })
+            .catch(err => console.error("Error fetching questions: ", err));
+    }
+
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
