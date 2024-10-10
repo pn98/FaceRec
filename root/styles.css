@@ -55,13 +55,23 @@ video {
 
 .nav-links a {
     color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px; /* Default padding */
+    background-color: transparent; /* Default background color */
+    border: 2px solid transparent; /* Default border */
+    transition: all 0.3s ease; /* Smooth transition for hover and unhover */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total size */
 }
 
 .nav-links a:hover {
-    color: #f39c12;
+    background-color: #f39c12; /* Hover background color */
+    border: 2px solid #fff; /* White border on hover */
+    padding: 10px 20px; /* Larger box on hover */
+    text-decoration: none;
+    border-radius: 10px;
 }
+
 
 /* Hero Section */
 .hero {
