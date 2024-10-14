@@ -33,8 +33,19 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: right; /* Space between the logo/heading and the nav links */
+    align-items: center; /* Vertically align items in the center */
+}
+
+.logo {
+    display: flex; /* Makes logo and heading align horizontally */
+    align-items: center; /* Center-align vertically */
+}
+
+.logo img {
+    width: 50px; /* Adjust the logo size */
+    height: auto;
+    margin-right: 15px; /* Add some spacing between the logo and the heading */
 }
 
 .logo h1 {
@@ -45,10 +56,10 @@ body {
 
 .nav-links {
     list-style: none;
+    display: flex; /* Aligns the nav links horizontally */
 }
 
 .nav-links li {
-    display: inline;
     margin-left: 20px;
 }
 
