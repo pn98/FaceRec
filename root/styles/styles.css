@@ -24,6 +24,42 @@ body {
     text-align: center;
 }
 
+/* Video Section Styles */
+.demo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking of video and question box */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-box {
+    margin-bottom: 20px; /* Space between video and question box */
+}
+
+.question-box {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+}
 
 /* Header & Navigation */
 .header {
@@ -81,6 +117,53 @@ body {
     text-decoration: none;
     border-radius: 10px;
 }
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed; /* Keeps it fixed in place */
+    left: 0; /* Aligns to the left side of the page */
+    top: 50%; /* Starts at the middle of the page */
+    transform: translateY(-50%); /* Centers vertically */
+    width: 220px; /* Adjust the width of the sidebar */
+    background-color: #2c3e50; /* A sleek dark blue background */
+    border-right: 2px solid #f39c12; /* Orange border for a premium look */
+    padding: 20px 0; /* Padding inside the sidebar */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 0 10px 10px 0; /* Rounded edges on the right */
+}
+
+.sidebar-links {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 20px; /* Space between links */
+}
+
+.sidebar-links a {
+    color: #fff; /* White text for links */
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly larger text for elegance */
+    padding: 10px 20px;
+    display: block; /* Makes the link a block-level element */
+    background-color: transparent;
+    border-left: 4px solid transparent; /* Adds space for a border effect */
+    transition: all 0.3s ease; /* Smooth hover transitions */
+}
+
+.sidebar-links a:hover {
+    background-color: #f39c12; /* Orange background on hover */
+    border-left: 4px solid #fff; /* Left border changes color on hover */
+    border-radius: 0 5px 5px 0; /* Round corners when hovered */
+    padding-left: 25px; /* Shift the text a little when hovered */
+}
+
+.sidebar-links a.active {
+    background-color: #f39c12; /* Keep active link highlighted */
+    border-left: 4px solid #fff; /* Highlight active link with a white border */
+}
+
 
 /* Hero Section */
 .hero {
@@ -173,3 +256,4 @@ body {
 .btn-secondary:hover {
     background-color: rgb(0, 106, 255);
 }
+
