@@ -17,17 +17,10 @@ body {
     flex-direction: column; /* Stack everything in a column */
 }
 
-.headingContact {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 .container {
-    width: 85%;
+    width: 100%;
+    max-width: 500px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
     text-align: center;
     display: flex;
     flex-direction: column; /* Stack child elements in a column */
@@ -35,63 +28,11 @@ body {
     align-items: center;
 }
 
-/* Header & Navigation */
-.header {
-    background-color: #333;
-    padding: 20px 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    color: #fff;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline;
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    display: inline-block;
-    text-align: center;
-    padding: 5px 10px;
-    background-color: transparent;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-.nav-links a:hover {
-    background-color: #f39c12;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-}
-.login {
-    margin-top: 20px;
+.headingLogin {
     margin-bottom: 20px;
-    padding: 0 20px;
-    width: 100%;
-    text-align: center;
 }
 
-.login-grid {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.login {
     width: 100%;
 }
 
@@ -100,54 +41,45 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Centering the form */
+    width: 100%;
     box-sizing: border-box;
+}
+
+.form-group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center; /* Aligns items vertically */
+}
+
+.form-group label {
+    width: 35%; /* Increased width to fit longer labels */
+    text-align: right;
+    padding-right: 10px;
+    white-space: nowrap; /* Prevents label text from wrapping to a new line */
+    font-size: 0.9rem; /* Slightly smaller font size to fit */
+}
+
+.form-group input {
+    width: 60%; /* Adjusted width for inputs */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .btn-login {
     background-color: #f39c12;
     color: #fff;
     margin-top: 20px;
-    margin-bottom: 20px;
     padding: 10px 20px;
     font-size: 1.1rem;
     display: inline-block;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
     outline: none;
 }
 
-/* Button Styles */
-.btn-primary, .btn-secondary {
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    display: inline-block;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-}
-
-.btn-primary {
-    background-color: #f39c12;
-    color: #fff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.btn-primary:hover {
+.btn-login:hover {
     background-color: #e67e22;
-    text-decoration: none;
-}
-
-.btn-secondary {
-    margin: 10px;
-    color: #fff;
-    background-color: rgb(38, 109, 185);
-}
-
-.btn-secondary:hover {
-    background-color: rgb(255, 255, 255);
 }
